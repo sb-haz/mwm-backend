@@ -1,74 +1,43 @@
 package com.myweddingmoments.app.marketplace.vendor;
 
-import jakarta.annotation.PostConstruct;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
 public class VendorRepository {
 
-    private List<Vendor> vendors = new ArrayList<>();
+    private final JdbcClient jdbcClient;
+    private static final Logger logger = LoggerFactory.getLogger(VendorRepository.class);
 
-    List<Vendor> getAllVendors() {
-        return vendors;
+    public VendorRepository(JdbcClient jdbcClient) {
+        this.jdbcClient = jdbcClient;
     }
 
-    Optional<Vendor> getVendorById(Long id) {
-        return vendors.stream()
-                .filter(vendor -> vendor.getId().equals(id))
-                .findFirst();
+    public List<Vendor> getAllVendors() {
+        return jdbcClient.sql("SELECT * FROM vendor")
+                .query(Vendor.class)
+                .list();
     }
 
-    void addVendor(Vendor vendor) {
-        vendors.add(vendor);
+    public Optional<Vendor> getVendorById(Long id) {
+        return jdbcClient.sql("SELECT * FROM vendor WHERE id = :id")
+                .param("id", id)
+                .query(Vendor.class)
+                .optional();
     }
 
-    void updateVendor(Vendor vendor, Long id) {
-        Optional<Vendor> existingVendor = getVendorById(id);
-        if (existingVendor.isPresent()) vendors.set(vendors.indexOf(existingVendor.get()), vendor);
+    public void addVendor(Vendor vendor) {
     }
 
-    boolean deleteVendor(Long id) {
-        // Try to find the vendor
-        Optional<Vendor> vendorOptional = vendors.stream()
-                .filter(vendor -> vendor.getId().equals(id))
-                .findFirst();
+    public void updateVendor(Vendor vendor, Long id) {
+    }
 
-        // If vendor exists, remove it
-        if (vendorOptional.isPresent()) {
-            vendors.remove(vendorOptional.get());
-            return true;
-        }
-
+    public boolean deleteVendor(Long id) {
         return false;
     }
-
-    // Temp init method
-    @PostConstruct
-    private void init() {
-        vendors.add(new Vendor(1L,
-                "Exotic Chauffeur Hire",
-                "exotic@outlook.com",
-                List.of("United Kingdom"),
-                4.9,
-                new ArrayList<>()));
-
-        vendors.add(new Vendor(2L,
-                "Fahima's Cakes & Desserts",
-                "fahima@gmail.com",
-                List.of("Birmingham"),
-                4.8,
-                new ArrayList<>()));
-
-        vendors.add(new Vendor(3L,
-                "Supreme Events UK",
-                "enquiries@supremeeventsuk.com",
-                List.of("London", "Birmingham", "Manchester"),
-                4.7,
-                new ArrayList<>()));
-    }
-
 }
