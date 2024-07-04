@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS category (
     name VARCHAR(255) NOT NULL
 );
 
--- Service table
-CREATE TABLE IF NOT EXISTS service (
+-- Offering table
+CREATE TABLE IF NOT EXISTS offering (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT,

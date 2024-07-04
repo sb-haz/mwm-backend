@@ -1,12 +1,16 @@
 package com.myweddingmoments.app.marketplace.vendor;
 
-import com.myweddingmoments.app.marketplace.service.Service;
+import com.myweddingmoments.app.marketplace.offering.Offering;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
 import java.util.List;
 
+@Entity
 public class Vendor {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotEmpty
@@ -22,16 +26,18 @@ public class Vendor {
     private double rating;
 
     private List<String> locationsCovered;
-    private List<Service> servicesOffered;
+
+    @OneToMany(mappedBy = "vendor", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<Offering> offerings;
 
     public Vendor() {}
 
-    public Vendor(Long id, String name, String email, double rating, List<String> locationsCovered, List<Service> servicesOffered) {
+    public Vendor(Long id, String name, String email, double rating, List<String> locationsCovered, List<Offering> offerings) {
         this.id = id;
         this.name = name;
         this.rating = rating;
         this.locationsCovered = locationsCovered;
-        this.servicesOffered = servicesOffered;
+        this.offerings = offerings;
     }
 
     public Long getId() {
@@ -69,11 +75,11 @@ public class Vendor {
         this.locationsCovered = locationsCovered;
     }
 
-    public List<Service> getServicesOffered() {
-        return servicesOffered;
+    public List<Offering> getOfferings() {
+        return offerings;
     }
-    public void setServicesOffered(List<Service> servicesOffered) {
-        this.servicesOffered = servicesOffered;
+    public void setOfferings(List<Offering> offerings) {
+        this.offerings = offerings;
     }
 
 }

@@ -3,6 +3,7 @@ package com.myweddingmoments.app.marketplace.vendor;
 import com.myweddingmoments.app.marketplace.vendor.exceptions.VendorNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,29 +18,39 @@ public class VendorService {
         this.vendorRepository = vendorRepository;
     }
 
-    public List<Vendor> getAllVendors() {
-        return vendorRepository.getAllVendors();
+    public List<Vendor> findAllVendors() {
+        return vendorRepository.findAll();
     }
 
-    public Vendor getVendorById(Long id) {
-        Optional<Vendor> vendor = vendorRepository.getVendorById(id);
+    public Vendor findVendorById(Long id) {
+        Optional<Vendor> vendor = vendorRepository.findById(id);
         if (vendor.isEmpty()) throw new VendorNotFoundException();
         return vendor.get();
     }
 
+    @Transactional
     public void addVendor(Vendor vendor) {
-        // logic before adding a vendor
-        vendorRepository.addVendor(vendor);
+        vendorRepository.save(vendor);
     }
 
-    public void updateVendor(Vendor vendor, Long id) {
-        // logic before updating a vendor
-        vendorRepository.updateVendor(vendor, id);
+    @Transactional
+    public Vendor updateVendor(Vendor vendor, Long id) {
+        Optional<Vendor> existingVendorOptional = vendorRepository.findById(id);
+        if (existingVendorOptional.isEmpty()) {
+            throw new VendorNotFoundException();
+        }
+        Vendor existingVendor = existingVendorOptional.get();
+        existingVendor.setName(vendor.getName());
+//        existingVendor.setLocation(vendor.getLocation());
+
+        return vendorRepository.save(existingVendor);
     }
 
+    @Transactional
     public boolean deleteVendor(Long id) {
-        // logic before deleting a vendor
-        return vendorRepository.deleteVendor(id);
+        Vendor vendor = vendorRepository.findById(id).orElseThrow(VendorNotFoundException::new);
+        vendorRepository.delete(vendor);
+        return true;
     }
 
 }

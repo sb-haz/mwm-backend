@@ -55,93 +55,93 @@ INSERT INTO category (name) VALUES ('Bridal Wear');
 INSERT INTO category (name) VALUES ('Stationery');
 INSERT INTO category (name) VALUES ('Music & Entertainment');
 
--- Insert statements for Service table
--- Services for Exotic Chauffeur Hire
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Insert statements for Offering table
+-- Offerings for Exotic Chauffeur Hire
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Luxury Car Rentals', 'Rent luxury cars for special occasions', 'Hourly and daily rates available', 'Chauffeur services included', 4.9, 1, 1);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Wedding Transportation', 'Luxury transportation for weddings', 'Packages available based on duration and vehicle type', 'Includes chauffeur service', 4.7, 1, 1);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Vintage Car Hire', 'Classic and vintage cars for weddings', 'Daily rates available', 'Includes uniformed chauffeur', 4.7, 1, 1);
 
--- Services for Fahima's Cakes & Desserts
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Fahima's Cakes & Desserts
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Birthday Cakes', 'Customized birthday cakes and desserts', 'Prices vary based on design and size', 'Delivery available within Birmingham area', 4.5, 2, 2);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Dessert Catering', 'Variety of desserts for events', 'Tailored menus available', 'Suitable for weddings, parties, and corporate events', 4.6, 2, 2);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Wedding Cake Design', 'Bespoke wedding cake design and creation', 'Prices based on size and complexity', 'Tasting sessions available', 4.8, 2, 2);
 
--- Services for Supreme Events UK
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Supreme Events UK
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Event Planning Consultation', 'Initial consultation for event planning', 'Includes brainstorming and initial planning steps', 'Available for all types of events', 4.8, 3, 3);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Full Event Planning', 'Comprehensive event planning and management', 'End-to-end service including vendor coordination and logistics', 'Available nationwide', 4.9, 3, 3);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Destination Wedding Planning', 'Full-service planning for destination weddings', 'Custom quotes based on location and guest count', 'Includes travel arrangements', 4.9, 3, 3);
 
--- Services for Luxury Limo Rentals
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Luxury Limo Rentals
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Executive Chauffeur Service', 'Executive chauffeur service for business and leisure', 'Hourly and daily rates available', 'Luxury vehicles with professional chauffeurs', 4.8, 4, 1);
 
--- Services for Gourmet Delights Catering
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
-VALUES ('Corporate Catering', 'Catering services for corporate events', 'Customizable menus based on dietary preferences', 'Includes setup and cleanup services', 4.7, 5, 2);
+-- Offerings for Gourmet Delights Catering
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+VALUES ('Corporate Catering', 'Catering Offerings for corporate events', 'Customizable menus based on dietary preferences', 'Includes setup and cleanup services', 4.7, 5, 2);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Wedding Catering', 'Tailored wedding catering services', 'Full-service catering with multiple menu options', 'Available for weddings of all sizes', 4.8, 5, 2);
 
--- Services for Elegant Occasions Planning
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Elegant Occasions Planning
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Birthday Party Planning', 'Birthday party planning services', 'Includes theme conceptualization and event management', 'Available in London, Birmingham, and Manchester', 4.7, 6, 3);
 
--- Services for Deluxe Floral Designs
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Deluxe Floral Designs
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Wedding Floral Arrangements', 'Custom wedding floral designs', 'Tailored to match wedding theme and colors', 'Delivery and setup included', 4.6, 7, 5);
 
--- Services for Grand Marquee Hire
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Grand Marquee Hire
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Luxury Marquee Hire', 'Luxury marquee hire services', 'Includes setup and decoration options', 'Available for weddings and large events', 4.6, 8, 5);
 
--- Services for Bridal Bliss Boutique
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Bridal Bliss Boutique
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Bridal Gown Fitting', 'Professional fitting service for bridal gowns', 'Fitting fee included with gown purchase', 'Appointments required', 4.8, 11, 7);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Bridesmaid Dress Selection', 'Curated selection of bridesmaid dresses', 'Prices vary by style and designer', 'Group appointments available', 4.7, 11, 7);
 
--- Services for Enchanted Entertainment
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
-VALUES ('Wedding DJ Services', 'Professional DJ services for weddings', 'Packages start from £500', 'Includes sound system and lighting', 4.9, 12, 9);
+-- Offerings for Enchanted Entertainment
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+VALUES ('Wedding DJ Services', 'Professional DJ Offerings for weddings', 'Packages start from £500', 'Includes sound system and lighting', 4.9, 12, 9);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Live Band Performance', 'Live music performance for wedding receptions', 'Prices based on duration and band size', 'Customizable song list', 4.8, 12, 9);
 
--- Services for Timeless Wedding Photography
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Timeless Wedding Photography
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Wedding Day Photography', 'Full-day wedding photography coverage', 'Packages start from £1500', 'Includes edited digital photos and album', 4.9, 13, 4);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Engagement Photoshoot', 'Pre-wedding engagement photography session', 'Starting at £300', 'Choice of location within 20 miles', 4.7, 13, 4);
 
--- Services for Bespoke Wedding Stationery
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Bespoke Wedding Stationery
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Custom Wedding Invitations', 'Personalized wedding invitation design and printing', 'Pricing based on quantity and design complexity', 'Free sample pack available', 4.8, 14, 8);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Day-of Stationery Package', 'Complete package of wedding day stationery', 'Packages start from £400', 'Includes menus, place cards, and signage', 4.7, 14, 8);
 
--- Services for Harmony Wedding Band
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+-- Offerings for Harmony Wedding Band
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Wedding Reception Performance', 'Live band performance for wedding receptions', '4-hour performance package from £1800', 'Includes DJ service between sets', 4.9, 15, 9);
 
-INSERT INTO service (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
+INSERT INTO offering (name, description, pricing_fees, additional_info, rating, vendor_id, category_id)
 VALUES ('Ceremony Music', 'Live music for wedding ceremonies', 'Starting at £300 for solo musician', 'Choice of instruments available', 4.8, 15, 9);
 
 -- Insert statements for Location table
