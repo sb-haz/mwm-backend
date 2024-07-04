@@ -1,48 +1,48 @@
 -- Insert statements for Vendor table
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Exotic Chauffeur Hire', 'exotic@outlook.com', '+44 1234567890', 'https://exoticchauffeurhire.com');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Exotic Chauffeur Hire', 'exotic@outlook.com', '+44 1234567890', 4.9);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Fahima''s Cakes & Desserts', 'fahima@gmail.com', '+44 9876543210', 'https://fahimascakesanddesserts.com');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Fahima''s Cakes & Desserts', 'fahima@gmail.com', '+44 9876543210', 4.8);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Supreme Events UK', 'enquiries@supremeeventsuk.com', '+44 7456123890', 'https://supremeeventsuk.com');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Supreme Events UK', 'enquiries@supremeeventsuk.com', '+44 7456123890', 4.7);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Luxury Limo Rentals', 'info@luxurylimorentals.co.uk', '+44 7700112233', 'https://luxurylimorentals.co.uk');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Luxury Limo Rentals', 'info@luxurylimorentals.co.uk', '+44 7700112233', 4.9);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Gourmet Delights Catering', 'info@gourmetdelights.co.uk', '+44 7700223344', 'https://gourmetdelights.co.uk');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Gourmet Delights Catering', 'info@gourmetdelights.co.uk', '+44 7700223344', 4.6);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Elegant Occasions Planning', 'events@elegantoccasionsplanning.com', '+44 7700334455', 'https://elegantoccasionsplanning.com');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Elegant Occasions Planning', 'events@elegantoccasionsplanning.com', '+44 7700334455', 4.8);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Deluxe Floral Designs', 'contact@deluxefloraldesigns.com', '+44 7700445566', 'https://deluxefloraldesigns.com');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Deluxe Floral Designs', 'contact@deluxefloraldesigns.com', '+44 7700445566', 4.7);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Grand Marquee Hire', 'info@grandmarqueehire.co.uk', '+44 7700556677', 'https://grandmarqueehire.co.uk');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Grand Marquee Hire', 'info@grandmarqueehire.co.uk', '+44 7700556677', 4.6);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Silver Spoon Catering', 'info@silverspooncatering.com', '+44 7700667788', 'https://silverspooncatering.com');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Silver Spoon Catering', 'info@silverspooncatering.com', '+44 7700667788', 4.5);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Elite Party Planners', 'info@elitepartyplanners.co.uk', '+44 7700778899', 'https://elitepartyplanners.co.uk');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Elite Party Planners', 'info@elitepartyplanners.co.uk', '+44 7700778899', 4.8);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Bridal Bliss Boutique', 'info@bridalblissboutique.co.uk', '+44 7700889900', 'https://bridalblissboutique.co.uk');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Bridal Bliss Boutique', 'info@bridalblissboutique.co.uk', '+44 7700889900', 4.7);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Enchanted Entertainment', 'bookings@enchantedentertainment.com', '+44 7700990011', 'https://enchantedentertainment.com');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Enchanted Entertainment', 'bookings@enchantedentertainment.com', '+44 7700990011', 4.8);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Timeless Wedding Photography', 'info@timelessweddingphotos.co.uk', '+44 7701112233', 'https://timelessweddingphotos.co.uk');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Timeless Wedding Photography', 'info@timelessweddingphotos.co.uk', '+44 7701112233', 4.7);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Bespoke Wedding Stationery', 'orders@bespokeweddingstationery.com', '+44 7701223344', 'https://bespokeweddingstationery.com');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Bespoke Wedding Stationery', 'orders@bespokeweddingstationery.com', '+44 7701223344', 4.6);
 
-INSERT INTO vendor (name, email, phone_number, website)
-VALUES ('Harmony Wedding Band', 'bookings@harmonyweddingband.co.uk', '+44 7701334455', 'https://harmonyweddingband.co.uk');
+INSERT INTO vendor (name, email, phone_number, rating)
+VALUES ('Harmony Wedding Band', 'bookings@harmonyweddingband.co.uk', '+44 7701334455', 4.7);
 
 -- Insert statements for Category table
 INSERT INTO category (name) VALUES ('Transportation');

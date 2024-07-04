@@ -32,12 +32,26 @@ public class VendorRepository {
     }
 
     public void addVendor(Vendor vendor) {
+        // logic to add a new vendor
+    }
+
+    public void addMultipleVendors(List<Vendor> vendors) {
+        vendors.stream().forEach(this::addVendor);
     }
 
     public void updateVendor(Vendor vendor, Long id) {
+        // logic to update a vendor
     }
 
     public boolean deleteVendor(Long id) {
+        // logic to delete a vendor
         return false;
+    }
+
+    public int countVendors() {
+        return jdbcClient.sql("SELECT COUNT(*) FROM vendor")
+                .query()
+                .listOfRows()
+                .size();
     }
 }

@@ -17,32 +17,22 @@ public class Vendor {
     @NotBlank
     private String email;
 
-    private List<String> locationsCovered;
-
     @DecimalMin(value = "0.0")
     @DecimalMax(value = "5.0")
     private double rating;
 
+    private List<String> locationsCovered;
     private List<Service> servicesOffered;
-
-    // Constructors
 
     public Vendor() {}
 
-    public Vendor(Long id,
-                  String name,
-                  String email,
-                  List<String> locationsCovered,
-                  double rating,
-                  List<Service> servicesOffered) {
+    public Vendor(Long id, String name, String email, double rating, List<String> locationsCovered, List<Service> servicesOffered) {
         this.id = id;
         this.name = name;
-        this.locationsCovered = locationsCovered;
         this.rating = rating;
+        this.locationsCovered = locationsCovered;
         this.servicesOffered = servicesOffered;
     }
-
-    // Getters and setters
 
     public Long getId() {
         return id;
@@ -65,18 +55,18 @@ public class Vendor {
         this.email = email;
     }
 
-    public List<String> getLocationsCovered() {
-        return locationsCovered;
-    }
-    public void setLocationsCovered(List<String> locationsCovered) {
-        this.locationsCovered = locationsCovered;
-    }
-
     public double getRating() {
         return rating;
     }
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    public List<String> getLocationsCovered() {
+        return locationsCovered;
+    }
+    public void setLocationsCovered(List<String> locationsCovered) {
+        this.locationsCovered = locationsCovered;
     }
 
     public List<Service> getServicesOffered() {

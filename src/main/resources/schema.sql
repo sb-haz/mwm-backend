@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS vendor (
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     phone_number VARCHAR(20) NOT NULL,
-    website VARCHAR(255)
+    rating DECIMAL(3, 1)
 );
 
 -- Category table
