@@ -4,9 +4,11 @@ import com.myweddingmoments.app.marketplace.offering.Offering;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "vendor")
 public class Vendor {
 
     @Id
@@ -15,6 +17,9 @@ public class Vendor {
 
     @NotEmpty
     private String name;
+
+    @NotEmpty
+    private String owner;
 
     @NotEmpty
     @Email
@@ -28,13 +33,15 @@ public class Vendor {
     private List<String> locationsCovered;
 
     @OneToMany(mappedBy = "vendor", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<Offering> offerings;
+    private List<Offering> offerings = new ArrayList<>();
 
     public Vendor() {}
 
-    public Vendor(Long id, String name, String email, double rating, List<String> locationsCovered, List<Offering> offerings) {
+    public Vendor(Long id, String name, String owner, String email, double rating, List<String> locationsCovered, List<Offering> offerings) {
         this.id = id;
         this.name = name;
+        this.owner = owner;
+        this.email = email;
         this.rating = rating;
         this.locationsCovered = locationsCovered;
         this.offerings = offerings;
@@ -52,6 +59,13 @@ public class Vendor {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     public String getEmail() {

@@ -4,6 +4,7 @@ import com.myweddingmoments.app.marketplace.vendor.Vendor;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "offering")
 public class Offering {
 
     @Id
@@ -19,10 +20,11 @@ public class Offering {
 
     public Offering() {}
 
-    public Offering(Long id, String description, double price) {
+    public Offering(Long id, String description, double price, Vendor vendor) {
         this.id = id;
         this.description = description;
         this.price = price;
+        this.vendor = vendor;
     }
 
     public Long getId() {
